@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  #post
+  get 'post/index'
+  get 'post/create'
+  get 'post/new'
+
+  post 'posts' => 'post#create'
+
+  #mostrar el formulario get
+  #capturar el formulario post
+
   #clientes
   get 'clientes/index'
   get 'clientes'=>'clientes#index'
