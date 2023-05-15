@@ -1,9 +1,9 @@
 class PagesController < ApplicationController
   def index
+    @usuarios = User.all
   end
   def create
-    @user=User.new(name: params[:name],age: params[:age])
+    @user=User.new(name: params[:nombre],age: params[:edad])
     @user.save
-
   end
 end

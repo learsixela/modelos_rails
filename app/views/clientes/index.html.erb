@@ -1,0 +1,30 @@
+<form action="/clientes/create" method="get">
+    <label for="nombre">Nombre</label>
+    <input type="text" id="nombre" name="nombre" >
+    <br>
+    <label for="apellido">Apellido</label>
+    <input type="text" id="apellido" name="apellido" >
+
+    <button type="submit" class="btn btn-primary">Enviar</button>
+
+</form>
+
+<h2>Lista de Clientes</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @clientes.each do |cliente| %>
+    <tr>
+      <th scope="row"><%= cliente.id %></th>
+      <td><%= cliente.nombre %></td>
+      <td><%= cliente.apellido %></td>
+    </tr>
+  <%end%>  
+  </tbody>
+</table>

@@ -1,12 +1,35 @@
-<form action="/pages/create" method="get">
+
+<!--loclahost:3000/page/index.html -->
+<h1>Metodo GET</h1>
+<form action="/pages/create" method="post">
   <div class="mb-3">
     <label for="name" class="form-label">Nombre</label>
-    <input type="text" class="form-control" id="name" name="name" >
-  </div> 
+    <input type="text" class="form-control" id="name" name="nombre" >
+  </div>
   <div class="mb-3">
     <label for="age" class="form-label">Edad</label>
-    <input type="number" class="form-control" id="age" name="age" >
+    <input type="number" class="form-control" id="age" name="edad" >
   </div>
-
   <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
+<br>
+
+<h2>Lista de Usuarios</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Edad</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @usuarios.each do |usuario| %>
+    <tr>
+      <th scope="row"><%= usuario.id %></th>
+      <td><%= usuario.name %></td>
+      <td><%= usuario.age %></td>
+    </tr>
+  <%end%>  
+  </tbody>
+</table>
