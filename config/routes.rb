@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  #estudiante
+  get 'estudiante/index'
+  get 'estudiante/new'
+  #get 'estudiante/create'
+  post 'estudiantes'=> 'estudiante#create'
+
   #post
   get 'post/index'
   get 'post/create'

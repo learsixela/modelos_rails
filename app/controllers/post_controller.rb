@@ -2,12 +2,7 @@ class PostController < ApplicationController
   def index
   end
 
-  def create
-    #capturar el formulario
-    @post = Post.new(posts_params)
-    @post.save
-    #pp @post #revisar los parametros
-  end
+
 
   def new
     #mostrar la pagina

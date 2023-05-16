@@ -1,0 +1,17 @@
+<%= form_with model: @estudiante, method: :post do |form|%>
+
+    <div>
+        <%= form.label :nick, "Nick de usuario"%>
+        <%= form.text_field :nick%>
+    </div>
+    <div>
+        <%= form.label :password, "Password de usuario"%>
+        <%= form.text_field :password%>
+    </div>
+    <div>
+        <%= form.submit%>
+    </div>
+
+ 
+<% end %>
+
